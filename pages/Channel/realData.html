@@ -1,0 +1,76 @@
+<style>
+    .inline_block {
+        display: inline-block;
+    }
+</style>
+<div id="realData" class="wraper container-fluid">
+    <div class="page-title">
+        <h5 class="title inline_block">渠道数据 > 实时数据</h5>
+        <h6 class="title inline_block">&nbsp;&nbsp;&nbsp;截止最近5分钟</h6>
+    </div>
+    <div class="panel">
+        <div class="panel-body">
+            <div class="page-title">
+                <h3 class="title">各渠道实时数据</h3>
+            </div>
+            <table class="table table-bordered table-striped" id="datatable1">
+                <thead>
+                    <tr>
+                        <th style="width: 20%;">时间</th>
+                        <th style="width: 20%;">产品名称</th>
+                        <th style="width: 20%;">渠道ID</th>
+                        <th style="width: 20%;">渠道名称</th>
+                        <th style="width: 20%;">新增</th>
+                    </tr>
+                </thead>
+                <tbody id="tbodyr">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="panel">
+        <div class="panel-body">
+            <div class="">
+                <form class="form-inline" role="form">
+                    <div class="form-group">
+                        <span id="pro">产品名称 ：</span>
+                        <select id="product" style="margin-right:10px;background-color: #fff;"></select>
+                    </div>
+                    <div class="form-group m-l-15" style="margin-left:100px;">
+                        <span id="one">渠道名称 ：</span>
+                        <select id="channel_one" style="display: none;">
+                        </select>
+                    </div>
+                    <button class="btn btn-success m-r-15" style="float:right;" id="search" type="button">查询</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="panel">
+        <div class="panel-body">
+            <div class="page-title">
+                <h3 class="title inline_block">新增</h3>
+                <div class="addDateChild inline_block" style="float: right;">
+                    添加日期 ：
+                    <input class="Wdate w_h1" type="text" onClick="WdatePicker({maxDate:format((new Date() - 86400000*2), 'yyyy-MM-dd'),onpicked:function(dp){realData.chooseDate(dp.cal.getNewDateStr())}})"
+                        onfocus="WdatePicker({maxDate:format((new Date() - 86400000*2), 'yyyy-MM-dd'),onpicked:function(dp){realData.chooseDate(dp.cal.getNewDateStr())}})">
+                </div>
+            </div>
+            <div class="chars-content" >
+                <!-- <div class="chars-mid current"> -->
+                <!-- <div class="charstwo-conmid currenttwo" style="overflow: hidden;"> -->
+                <div id="chartmain" style="width:108%;height:400px;margin:10px -29px;"></div>
+                <!-- </div> -->
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+
+
+    <!-- END PAGE -->
+    <!-- END CONTAINER -->
+    <!-- BEGIN FOOTER -->
+
+</div>
+<script src="../js/echarts3.7.1.js"></script>

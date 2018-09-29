@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
+    <meta name="author" content="Coderthemes">
+
+    <!-- <link rel="shortcut icon" href="../img/favicon_1.ico"> -->
+
+    <title>闲徕互娱-投放平台</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-reset.css" rel="stylesheet">
+
+    <!--Animation css-->
+    <link href="../css/animate.css" rel="stylesheet">
+
+    <!--Icon-fonts css-->
+    <link href="../assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="../assets/ionicon/css/ionicons.min.css" rel="stylesheet" />
+
+    <!--Morris Chart CSS -->
+    <link rel="stylesheet" href="../assets/morris/morris.css">
+
+    <!-- sweet alerts -->
+    <link href="../assets/sweet-alert/sweet-alert.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/helper.css" rel="stylesheet">
+
+    <link href="../css/jquery.searchableSelect.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+    <!--[if lt IE 9]>
+          <script src="js/html5shiv.js"></script>
+          <script src="js/respond.min.js"></script>
+        <![endif]-->
+    <style>
+        .w_h {
+            width: 150px !important;
+            height: 34px !important;
+            border: 1px solid #ccc !important;
+            border-radius: 4px !important;
+            padding: 6px !important;
+        }
+
+        .w_h1 {
+            width: 130px !important;
+            height: 34px !important;
+            border: 1px solid #ccc !important;
+            border-radius: 4px !important;
+            padding: 6px 6px 6px 12px !important;
+        }
+
+        .w_h2 {
+            width: 124px !important;
+            height: 30px !important;
+            border: 1px solid #ccc !important;
+            border-radius: 4px !important;
+            padding: 6px !important;
+        }
+
+        .left-panel .logo {
+            display: none;
+        }
+
+        .collapsed .logo {
+            display: block;
+        }
+
+        .collapsed .logo2 {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 导航 collapsed收起-->
+    <aside class="left-panel">
+
+        <div class="logo">
+            <a href="#home" class="logo-expanded">
+                <i class="ion-social-buffer"></i>
+            </a>
+        </div>
+        <div class="logo2">
+            <a href="#home">
+                <img class="logo-img" src="../img/logo.png">
+            </a>
+        </div>
+
+        <nav class="navigation">
+            <ul class="list-unstyled">
+            </ul>
+        </nav>
+
+    </aside>
+    <!-- 导航 Ends-->
+
+
+    <section class="content">
+
+        <!-- 头部 -->
+        <header class="top-head container-fluid">
+            <button type="button" class="navbar-toggle pull-left">
+                <span class="sr-only">展开/收起</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- 搜索 -->
+            <!-- <form role="search" class="navbar-left app-search pull-left hidden-xs">
+                <input type="text" placeholder="Search..." class="form-control">
+                <a href="#">
+                    <i class="fa fa-search"></i>
+                </a>
+            </form> -->
+
+            <!-- 头部导航 -->
+            <nav class=" navbar-default" role="navigation">
+                <!-- Right navbar -->
+                <ul class="nav navbar-nav navbar-right top-menu top-right-menu">
+                    <!-- 用户下拉-->
+                    <li class="dropdown text-center">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <img alt="" src="../img/avatar-2.jpg" class="img-circle profile-img thumb-sm">
+                            <span class="username"></span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu pro-menu fadeInUp animated" tabindex="5003" style="overflow: hidden; outline: none;">
+                            <!-- <li>
+                                <a href="#">
+                                    <i class="fa fa-cog"></i>设置</a>
+                            </li> -->
+                            <li>
+                                <a href="#" id="logout">
+                                    <i class="fa fa-sign-out"></i>登出</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+        </header>
+        <!-- Header Ends -->
+
+
+        <!-- 页面内容 -->
+        <div class="wraper container-fluid" id="ui-view">
+            <p class="">欢迎使用闲徕投放管理系统</p>
+        </div>
+
+        <!-- Footer Start -->
+        <!-- <footer class="footer">
+            2018 © xianlai.
+        </footer> -->
+        <!-- Footer Ends -->
+
+
+
+    </section>
+    <!-- Main Content Ends -->
+
+
+
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/modernizr.min.js"></script>
+    <script src="../js/pace.min.js"></script>
+    <script src="../js/wow.min.js"></script>
+    <script src="../js/jquery.scrollTo.min.js"></script>
+    <script src="../js/jquery.nicescroll.js" type="text/javascript"></script>
+    <script src="../assets/chat/moment-2.2.1.js"></script>
+
+    <!-- router -->
+    <script src="../js/vipspa.js"></script>
+    <script src="../js/common/util.js"></script>
+    <script src="../js/jquery.searchableSelect.js"></script>
+    <script src="../My97DatePicker/WdatePicker.js"></script>
+    <script src="../js/config.js"></script>
+    <!-- Counter-up -->
+    <!-- <script src="js/waypoints.min.js" type="text/javascript"></script>
+    <script src="js/jquery.counterup.min.js" type="text/javascript"></script> -->
+
+    <!-- EASY PIE CHART JS -->
+    <!-- <script src="assets/easypie-chart/easypiechart.min.js"></script>
+    <script src="assets/easypie-chart/jquery.easypiechart.min.js"></script>
+    <script src="assets/easypie-chart/example.js"></script> -->
+
+
+    <!--C3 Chart-->
+    <!-- <script src="assets/c3-chart/d3.v3.min.js"></script>
+    <script src="assets/c3-chart/c3.js"></script> -->
+
+    <!--Morris Chart-->
+    <!-- <script src="assets/morris/morris.min.js"></script>
+    <script src="assets/morris/raphael.min.js"></script> -->
+
+    <!-- sparkline -->
+    <!-- <script src="assets/sparkline-chart/jquery.sparkline.min.js" type="text/javascript"></script>
+    <script src="assets/sparkline-chart/chart-sparkline.js" type="text/javascript"></script> -->
+
+    <!-- sweet alerts -->
+    <script src="../assets/sweet-alert/sweet-alert.min.js"></script>
+    <script src="../assets/sweet-alert/sweet-alert.init.js"></script>
+
+    <script src="../js/jquery.app.js"></script>
+    <!-- Chat -->
+    <!-- <script src="../js/jquery.chat.js"></script> -->
+    <!-- Dashboard -->
+    <!-- <script src="../js/jquery.dashboard.js"></script> -->
+
+    <!-- Todo -->
+    <!-- <script src="js/jquery.todo.js"></script> -->
+
+
+    <script type="text/javascript">
+        var realData, overView;
+
+        jQuery(document).ready(function ($) {
+            console.log('index');
+
+            var name = localStorage.getItem('nickName'); //获取nickName的值
+            if (name == null) {
+                alert("登录超时，请重新登录");
+                window.location.href = location.origin + "/login.html";
+            } else {
+                $(".username").html(name);
+            }
+            $("#logout").on('click', function () {
+                $.ajax({
+                    type: "POST",
+                    url: config.path + "/channel/v1/index/logout",
+                    contentType: "application/json;charset=utf-8",
+                    dataType: 'json',
+                    xhrFields: {
+                        withCredentials: true
+                    },
+                    crossDomain: true,
+                    async: false,
+                    success: function (res) {
+                        if (res.code == 0) {
+                            localStorage.removeItem("nickName"); //删除本地信息
+                            window.location.href = location.origin + "/login.html";
+                            window.event.returnValue = false;
+                        }
+                    }, error: function (errorMsg) {
+                        if (errorMsg.responseJSON.code == 400) {
+                            alert('请求错误');
+                        } else if (errorMsg.responseJSON.code == 500) {
+                            alert('服务器异常');
+                        }
+                    }
+                });
+
+
+            })
+            getNav();
+        });
+
+        var navList;
+
+        function getNav() {
+            $.ajax({
+                url: config.path + "/channel/v1/index?t=" + Math.random(),
+                type: 'GET',
+                xhrFields: {
+                    withCredentials: true
+                },
+                crossDomain: true,
+                contentType: 'application/json;charset=utf-8',
+                dataType: 'json',
+                success: function (response) {
+                    if (response.code == 0) {
+                        navList = '';
+                        navList = response.data;
+                        showNav(true);
+
+                    } else if (response.code == 10004) {
+                        alert('登录超时，请重新登录');
+                        window.location.href = location.origin + "/login.html";
+                    }
+                }, error: function (errorMsg) {
+                    if (errorMsg.responseJSON.code == 400) {
+                        alert('请求错误');
+                    } else if (errorMsg.responseJSON.code == 500) {
+                        alert('服务器异常');
+                    }
+                }
+            });
+        }
+
+        function showNav(drawNav) {
+            if (drawNav) {
+                var list = navList;
+                if (list && list.length > 0) {
+                    var navArr = [];
+                    var html = '<li class="has-submenu">';
+                    for (var i = 0; i < list.length; i++) {
+                        if (list[i].isLeaf == 1) {//一级节点为叶子节点
+                            navArr.push(list[i].url);
+                            html += '<a href="' + list[i].url + '">';
+                            html += '<i class="' + list[i].icon + '"></i>';
+                            html += '<span class="nav-label">' + list[i].name + '</span></a></li>';
+                        } else {//一级节点为根节点
+                            html += '<a href="javascript:;">';
+                            html += '<i class="' + list[i].icon + '"></i>';
+                            html += '<span class="nav-label">' + list[i].name + '</span></a>';
+                            html += '<ul class="list-unstyled">';
+                            var childrenNav = list[i].childMenus;
+                            if (childrenNav.length > 0) {
+                                for (var j = 0; j < childrenNav.length; j++) {
+                                    navArr.push(childrenNav[j].url);
+                                    html += '<li class="' + childrenNav[j].url + '">';
+                                    html += '<a href="#' + childrenNav[j].url + '">' + childrenNav[j].name + '</a>';
+                                    html += '</li>';
+                                }
+                            }
+                            html += '</ul>';
+                        }
+                    }
+                    html += '</li>';
+                    $('.list-unstyled').html('');
+                    $('.list-unstyled').append(html);
+                    var sbar = new $.sBar();
+                    sbar.init();
+
+                    //动态生成路由
+                    var navOptions = {
+                        'home': {
+                            templateUrl: 'Home/home.html',
+                            controller: '../scripts/Home/home.js'
+                        },
+                        'defaults': 'home' //默认路由
+                    }
+                    for (var i = 0; i < navArr.length; i++) {
+                        navOptions[navArr[i]] = {
+                            templateUrl: 'Channel/'+navArr[i]+'.html',
+                            controller: '../scripts/Channel/'+navArr[i]+'.js'
+                        };
+                    }
+                    vipspa.start({
+                        view: '#ui-view',
+                        router: navOptions,
+                        errorTemplateId: '#error'  //可选的错误模板，用来处理加载html模块异常时展示错误内容
+                    });
+                }
+            }
+            //导航显示状态
+            var obj = vipspa.parse();
+            initNav(obj.url);
+        }
+
+        function initNav(page) {
+            $('.list-unstyled').find('.active').removeClass('active');
+            $('.list-unstyled').find('ul').css('display', 'none');
+            $('.' + page).addClass('active').parent('ul').css('display', 'block').parent('li').addClass('active');
+            if ($('.left-panel').hasClass('collapsed')) {
+                $('.' + page).addClass('active').parent('ul').css('display', 'none')
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

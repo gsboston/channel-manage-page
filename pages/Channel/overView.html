@@ -1,0 +1,61 @@
+<style>
+    .inline_block {
+        display: inline-block;
+    }
+</style>
+<div id="overView" class="wraper container-fluid">
+    <div class="page-title">
+        <h5 class="title inline_block">渠道数据 > 概况</h5>
+    </div>
+
+    <div class="panel">
+        <div class="panel-body">
+            <div class="">
+                <form class="form-inline" role="form">
+                    <div class="form-group">
+                        <input class="Wdate w_h1" id="startDate" type="text" onfocus="WdatePicker({lang:'zh-cn',dateFmt:'yyyy-MM-dd',maxDate:'#F{$dp.$D(\'endDate\')}'})">
+                        <span>-</span>
+                        <input class="Wdate w_h1" id="endDate" type="text" onfocus="WdatePicker({lang:'zh-cn',dateFmt:'yyyy-MM-dd',minDate:'#F{$dp.$D(\'startDate\')}'})">
+                    </div>
+                    <div class="form-group m-l-15" style="margin-left:30px;">
+                        <span id="pro">产品名称 ：</span>
+                        <!-- <select id="gameId" class="w_h" style="background-color: #fff;"></select> -->
+                        <select id="product" style="display: none;">
+                        </select>
+                    </div>
+                    <div class="form-group m-l-15" style="margin-left:30px;">
+                        <span id="one">渠道名称 ：</span>
+                        <select id="channel_one" style="display: none;">
+                        </select>
+                    </div>
+                    <button class="btn btn-success m-r-15" style="float:right;" id="search" type="button">查询</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel">
+        <div class="panel-body">
+            <div class="page-title">
+                <h3 class="title">概况</h3>
+            </div>
+            <table class="table table-bordered table-striped" id="overView_datatable">
+                <thead>
+                    <tr>
+                        <th>日期</th>
+                        <th>产品名称</th>
+                        <th>系统类型</th>
+                        <th>渠道名称</th>
+                        <th>渠道ID</th>
+                        <th>合作模式</th>
+                        <th>新增</th>
+                    </tr>
+                </thead>
+                <tbody id="overView_tbody">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
